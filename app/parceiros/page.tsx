@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const editais = [
   { year: '2024', title: 'Educação Empreendedora 2.0', fonte: 'Fundo Nacional de Desenvolvimento Social', status: 'Ativo', statusColor: '#C9951A' },
@@ -7,11 +8,10 @@ const editais = [
 ]
 
 const parceiros = [
-  'Fundação Z',
-  'Instituto Alpha',
-  'Empresa Beta',
-  'NGO Global',
-  'Fundo Delta',
+  { name: 'HUB Canoa Grande', logo: '/parceiros/hub.png' },
+  { name: 'UFPE', logo: '/parceiros/ufpe.png' },
+  { name: 'IFPE', logo: '/parceiros/ifpe.png' },
+  { name: 'CTEN', logo: '/parceiros/cten.png' },
 ]
 
 const transparencia = [
@@ -104,15 +104,19 @@ export default function ParceirosPage() {
       <section className="max-w-7xl mx-auto px-6 py-20">
         <h2 className="font-display font-bold text-3xl text-[#1C1C2E] text-center mb-3">Parceiros Institucionais</h2>
         <div className="w-10 h-0.5 bg-[#8B35C4] mx-auto mb-10" />
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="flex flex-wrap justify-center gap-12">
           {parceiros.map((p) => (
-            <div key={p} className="flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
-              <div className="w-14 h-14 rounded-2xl bg-gray-100 flex items-center justify-center">
-                <svg className="w-7 h-7 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-                </svg>
+            <div key={p.name} className="flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
+              <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center border border-gray-200 shadow-sm">
+                <Image 
+                  src={p.logo} 
+                  alt={p.name}
+                  width={64}
+                  height={64}
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <span className="text-xs font-semibold uppercase tracking-widest text-gray-400">{p}</span>
+              <span className="text-xs font-semibold uppercase tracking-widest text-gray-400 text-center">{p.name}</span>
             </div>
           ))}
         </div>
