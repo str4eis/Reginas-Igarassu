@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const temas = [
   {
@@ -154,12 +155,46 @@ export default function PsicologiaFinanceiraPage() {
         <div className="max-w-3xl mx-auto px-6 text-center text-white">
           <p className="font-display text-5xl text-[#8B35C4] opacity-60 mb-4">"</p>
           <blockquote className="font-display italic text-2xl md:text-3xl leading-relaxed mb-6">
-            Nosso propósito é garantir que nenhuma mulher tome decisões financeiras a partir do medo,
-            mas a partir do conhecimento de si mesma.
+            À medida que gastamos dinheiro, devemos ter a coragem de fazer uma autoavaliação e admitir que emoção está conduzindo nossos gastos.
           </blockquote>
-          <p className="text-sm text-gray-400 uppercase tracking-widest">Beatriz Regina, Fundadora</p>
+          <p className="text-sm text-gray-400 uppercase tracking-widest">Deborah Smith Pegues</p>
         </div>
       </section>
+
+        {/* ─── APP COMPRAS CONSCIENTES ─── */}
+             <section className="max-w-7xl mx-auto px-6 py-20">
+               <div className="bg-gradient-to-br from-[#8B35C4]/5 to-[#2A9D8F]/5 rounded-3xl p-10 border border-gray-100 shadow-sm grid md:grid-cols-2 gap-10 items-center">
+                 {/* Preview */}
+                 <div className="bg-white rounded-2xl h-72 flex items-center justify-center border border-gray-100 order-2 md:order-1 overflow-hidden">
+                   <Image 
+                     src="/fotos/escala.png" 
+                     alt="Preview do app Compras Conscientes"
+                     width={400}
+                     height={400}
+                     className="w-full h-full object-cover"
+                   />
+                 </div>
+       
+                 <div className="order-1 md:order-2">
+                   <p className="section-label-teal">App Interativo</p>
+                   <h2 className="font-display font-bold text-3xl text-[#1C1C2E] mb-4">
+                     Compras Conscientes
+                   </h2>
+                   <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                     Controle impulsos e tome decisões de compra mais assertivas. Nosso app utiliza uma escala comportamental 
+                     para ajudá-la a identificar quando uma compra é realmente necessária. Pause, reflita e compre com propósito.
+                   </p>
+                   <div className="flex gap-3">
+                     <Link href="https://emanoelluiz01.github.io/Compra-Consciente/" target="_blank" className="bg-[#8B35C4] text-white text-sm font-semibold px-5 py-2.5 rounded-xl flex items-center gap-2 hover:bg-[#7B25B4] transition-colors">
+                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                       </svg>
+                       Acessar App
+                     </Link>
+                   </div>
+                 </div>
+               </div>
+             </section>
 
       {/* ─── ARTIGOS ─── */}
       <section className="max-w-7xl mx-auto px-6 py-20">

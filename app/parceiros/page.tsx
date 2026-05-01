@@ -2,9 +2,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const editais = [
-  { year: '2024', title: 'Educação Empreendedora 2.0', fonte: 'Fundo Nacional de Desenvolvimento Social', status: 'Ativo', statusColor: '#C9951A' },
-  { year: '2023', title: 'Mulheres na Ciência', fonte: 'Instituto de Inovação Global', status: 'Concluído', statusColor: '#2A9D8F' },
-  { year: '2024', title: 'Aceleração de Lideranças', fonte: 'Banco para o Progresso Comunitário', status: 'Em Execução', statusColor: '#8B35C4' },
+  { year: '2025', title: '8º Seminário de Agroecologia do IFPE', fonte: 'Instituto Federal de Pernambuco', status: 'Concluído', statusColor: '#C9951A' },
+  { year: '2025', title: 'FORCAMPO - CONIF', fonte: 'Instituto Federal de Pernambuco', status: 'Concluído', statusColor: '#2A9D8F' },
+  { year: '2025', title: 'ENEXC', fonte: 'Instituto Federal de Pernambuco', status: 'Concluído', statusColor: '#8B35C4' },
+  { year: '2025', title: 'SERNEGRA', fonte: 'Instituto Federal de Pernambuco', status: 'Concluído', statusColor: '#8B35C4' },
 ]
 
 const parceiros = [
