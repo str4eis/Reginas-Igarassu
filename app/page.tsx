@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function HomePage() {
   return (
@@ -24,19 +25,13 @@ export default function HomePage() {
 
         {/* Logo card */}
         <div className="flex justify-center md:justify-end">
-          <div className="w-72 h-72 md:w-80 md:h-80 rounded-3xl bg-[#8B35C4] flex items-center justify-center shadow-2xl">
-            <div className="text-center text-white">
-              <svg viewBox="0 0 120 120" className="w-32 h-32 mx-auto mb-2 opacity-90" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="60" cy="60" r="58" stroke="white" strokeWidth="1.5" opacity="0.3"/>
-                <ellipse cx="60" cy="38" rx="18" ry="22" fill="white" opacity="0.9"/>
-                <path d="M35 85 Q60 65 85 85 Q80 110 60 112 Q40 110 35 85Z" fill="white" opacity="0.9"/>
-                <path d="M42 20 Q50 5 60 18 Q70 5 78 20" stroke="white" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
-                <path d="M46 22 Q48 10 56 20" stroke="white" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.6"/>
-                <path d="M74 22 Q72 10 64 20" stroke="white" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.6"/>
-              </svg>
-              <p className="font-display font-bold text-xl tracking-wide">REGINAS</p>
-              <p className="text-xs tracking-[0.3em] opacity-80 mt-0.5">IGARASSU</p>
-            </div>
+          <div className="w-72 h-72 md:w-80 md:h-80 rounded-3xl bg-[#8B35C4] overflow-hidden shadow-2xl relative">
+            <Image
+              src="/logo.jpg"
+              alt="Logo Reginas"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
@@ -148,7 +143,7 @@ export default function HomePage() {
                 Planeje seu futuro com nossa ferramenta financeira simplificada, projetada para projetos de pequena escala.
               </p>
             </div>
-            <Link href="/ferramentas" className="mt-6 bg-white text-[#8B35C4] text-sm font-semibold py-2.5 px-5 rounded-full text-center hover:shadow-lg transition-all">
+            <Link href="/recursos" className="mt-6 bg-white text-[#8B35C4] text-sm font-semibold py-2.5 px-5 rounded-full text-center hover:shadow-lg transition-all">
               Abrir Simulador
             </Link>
           </div>

@@ -1,40 +1,47 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const team = [
   {
-    name: 'Beatriz Regina',
-    role: 'Fundadora & Curadora-Chefe',
+    name: 'Marydyana Mota',
+    role: 'Fundadora & CEO',
     color: '#C9951A',
-    bio: 'Mestra em Políticas Públicas com foco em inclusão digital. Beatriz fundou o Reginas para traduzir a complexidade institucional em ferramentas práticas para mulheres de todo o país.',
+    photo: '/time/mary.jpeg',
+    bio: 'Graduanda em Administração (IFPE), com expertise em gestão de pequenos negócios e vendas. Articuladora estratégica da parceria entre os projetos Reginas UFPE e Reginas IFPE, onde atua como extensionista facilitadora em educação financeira, finanças comportamentais e mensuração de custos para mulheres  de áreas rurais e urbanas.',
   },
   {
-    name: 'Mariana Souza',
-    role: 'Diretora de Operações',
+    name: 'Ester Reis',
+    role: 'Desenvolvedora',
     color: '#8B35C4',
-    bio: 'Especialista em gestão de projetos com 12 anos de experiência em ONGs internacionais. Mariana coordena nossa logística de impacto e parcerias estratégicas.',
+    photo: '/time/ester.jpg',
+    bio: 'Graduanda em Sistemas para Internet (IFPE), com formação técnica em Redes de Computadores (ETE). Atuou como bolsista no projeto de desenvolvimento de um MVP para gestão da merenda escolar em Itapissuma. Também atuou como voluntária no projeto “Produção de uma Escala e um Aplicativo para Redução de Compras Impulsivas” do IFPE, contribuindo para iniciativas de educação financeira, tecnologia social e promoção da saúde financeira e sustentabilidade.',
   },
   {
-    name: 'Helena Costa',
-    role: 'Líder de Design & UX',
+    name: 'Nayara Lima',
+    role: 'Voluntária',
     color: '#2A9D8F',
-    bio: 'Acredita que a estética é uma forma de cuidado. Helena é a mente por trás da identidade visual do Reginas, garantindo que o conhecimento seja acessível e belo.',
+    photo: '/time/nayara.jpg',
+    bio: 'Graduanda em Administração. Nayara é uma entusiasta de projetos sociais e tem experiência em gestão de eventos e comunicação. Ela é responsável por organizar nossas ações comunitárias e garantir que nossa mensagem alcance o público certo.',
   },
   {
-    name: 'Clara Mendes',
-    role: 'Especialista em Impacto Social',
+    name: 'Kécia Galvão',
+    role: 'Professora Doutora',
     color: '#C9951A',
-    bio: 'Cientista Social com foco em estudos de gênero. Clara mensura o alcance real de nossas ações e mantém nosso propósito alinhado às necessidades da comunidade.',
+    photo: '/time/kecia.jpeg',
+    bio: 'Parceira estratégica e orientadora do projeto.',
   },
   {
-    name: 'Aline Ferreira',
-    role: 'Desenvolvedora Sênior',
+    name: 'Roberta',
+    role: 'Coordenadora de Projetos',
     color: '#8B35C4',
+    photo: null,
     bio: 'Especialista em tecnologias de código aberto. Aline garante que nossa plataforma seja robusta, segura e escalável para suportar nossa crescente rede de usuárias.',
   },
   {
-    name: 'Luísa Rocha',
-    role: 'Gestora de Comunidade',
+    name: 'Luiz Henrique',
+    role: 'Orientador do Projeto',
     color: '#2A9D8F',
+    photo: '/time/luiz.png',
     bio: 'Jornalista e entusiasta de conexões humanas. Luísa é o ponto de contato principal de nossa rede, facilitando trocas e mentorias entre nossas integrantes.',
   },
 ]
@@ -46,11 +53,22 @@ function MemberCard({ member }: { member: typeof team[0] }) {
       {/* Avatar */}
       <div className="relative mb-4">
         <div className="absolute left-0 top-0 w-1 h-full rounded-full" style={{ backgroundColor: member.color }} />
-        <div className="ml-4 rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200 h-56 flex items-center justify-center">
-          <div className="w-20 h-20 rounded-full flex items-center justify-center text-white text-2xl font-bold font-display"
-            style={{ backgroundColor: member.color }}>
-            {initials}
-          </div>
+        <div className="ml-4 rounded-2xl overflow-hidden h-56 relative">
+          {member.photo ? (
+            <Image
+              src={member.photo}
+              alt={member.name}
+              fill
+              className="object-cover"
+            />
+          ) : (
+            <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+              <div className="w-20 h-20 rounded-full flex items-center justify-center text-white text-2xl font-bold font-display"
+                style={{ backgroundColor: member.color }}>
+                {initials}
+              </div>
+            </div>
+          )}
         </div>
       </div>
       <h3 className="font-display font-semibold text-lg text-[#1C1C2E]">{member.name}</h3>

@@ -8,8 +8,8 @@ const navLinks = [
   { href: '/sobre', label: 'Sobre' },
   { href: '/nosso-time', label: 'Nosso Time' },
   { href: '/impacto', label: 'Impacto' },
+  { href: '/psicologia-financeira', label: 'Psicologia Financeira' },
   { href: '/recursos', label: 'Recursos' },
-  { href: '/ferramentas', label: 'Ferramentas' },
   { href: '/parceiros', label: 'Parceiros' },
 ]
 
