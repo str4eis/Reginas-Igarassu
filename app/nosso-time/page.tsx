@@ -7,7 +7,7 @@ const team = [
     role: 'Fundadora & CEO',
     color: '#C9951A',
     photo: '/time/mary.jpeg',
-    bio: 'Graduanda em Administração (IFPE), com expertise em gestão de pequenos negócios e vendas. Articuladora estratégica da parceria entre os projetos Reginas UFPE e Reginas IFPE, onde atua como extensionista facilitadora em educação financeira, finanças comportamentais e mensuração de custos para mulheres  de áreas rurais e urbanas.',
+    bio: 'Marydyana Mota é graduanda em Administração pelo Instituto Federal de Pernambuco (IFPE), mãe e empreendedora. Atua com educação financeira, gestão de pequenos negócios e autonomia feminina, desenvolvendo pesquisas, projetos e formações voltadas ao fortalecimento econômico de mulheres em contextos de vulnerabilidade social. Também é extensionista e articuladora da parceria entre os projetos Reginas UFPE e Reginas IFPE.',
   },
   {
     name: 'Ester Reis',
@@ -21,28 +21,28 @@ const team = [
     role: 'Voluntária',
     color: '#2A9D8F',
     photo: '/time/nayara.jpg',
-    bio: 'Graduanda em Administração. Nayara é uma entusiasta de projetos sociais e tem experiência em gestão de eventos e comunicação. Ela é responsável por organizar nossas ações comunitárias e garantir que nossa mensagem alcance o público certo.',
+    bio: 'Graduanda em Administração, Nayara é entusiasta de projetos sociais e possui experiência em gestão de eventos, comunicação e ações comunitárias. Atua como estagiária na área administrativa do Instituto Federal de Pernambuco – Campus Igarassu, contribuindo para atividades de gestão e organização institucional. Também participou do projeto de pesquisa voltado ao desenvolvimento de uma escala para redução de compras impulsivas, iniciativa que deu origem ao aplicativo de compras conscientes.',
   },
   {
     name: 'Kécia Galvão',
     role: 'Professora Doutora',
     color: '#C9951A',
     photo: '/time/kecia.jpeg',
-    bio: 'Parceira estratégica e orientadora do projeto.',
+    bio: 'Possui graduação em Ciências Contábeis pela Universidade Federal de Pernambuco (2006), Doutora em Administração (UFPE) e Mestra em Ciências Contábeis pela mesma instituição, com sólida expertise em Finanças Corporativas e Contabilidade Gerencial. Professora Adjunta da UFPE, lidera o grupo de pesquisa "Caleidoscópio: Perspectivas em Finanças e Contabilidade", onde coordena os projetos de extensão de impacto social "Reginas" e "Educação Financeira nas Escolas".',
   },
   {
-    name: 'Roberta',
+    name: 'Roberta Aragão',
     role: 'Coordenadora de Projetos',
     color: '#8B35C4',
-    photo: null,
-    bio: 'Especialista em tecnologias de código aberto. Aline garante que nossa plataforma seja robusta, segura e escalável para suportar nossa crescente rede de usuárias.',
+    photo: '/time/roberta.jpeg',
+    bio: 'Doutoranda em Administração pela Universidade Federal de Pernambuco (UFPE), com pesquisa em Inteligência Artificial e otimização de estoques industriais. Mestre em Administração pela UFPE e graduada pela Universidade de Pernambuco (UPE). Docente do Instituto Federal de Pernambuco (IFPE), atua em ensino, pesquisa e extensão nas áreas de tomada de decisão, gestão e melhoria de processos.',
   },
   {
     name: 'Luiz Henrique',
     role: 'Orientador do Projeto',
     color: '#2A9D8F',
-    photo: '/time/luiz.png',
-    bio: 'Jornalista e entusiasta de conexões humanas. Luísa é o ponto de contato principal de nossa rede, facilitando trocas e mentorias entre nossas integrantes.',
+    photo: '/time/luiz.jpeg',
+    bio: 'Professor efetivo do Instituto Federal de Pernambuco - IFPE nas áreas de Administração e Logística. Graduando em Medicina pela Universidade Federal de Pernambuco - UFPE e Mestrando em Políticas Públicas pela UFPE. Formação em Administração com Especialização de Gestão de Pessoas.',
   },
 ]
 
@@ -98,18 +98,15 @@ export default function NossoTimePage() {
           </p>
         </div>
 
-        {/* Hero image placeholder */}
-        <div className="relative flex justify-end">
-          <div className="w-full max-w-sm rounded-3xl overflow-hidden bg-gradient-to-br from-slate-700 to-slate-900 h-80 flex items-center justify-center">
-            <div className="text-center text-white/40">
-              <svg className="w-16 h-16 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-              </svg>
-              <p className="text-sm">Foto tecnologia</p>
-            </div>
+        <div className="flex justify-center md:justify-end">
+          <div className="w-72 h-72 md:w-[500px] md:h-80 rounded-3xl bg-[#8B35C4] overflow-hidden shadow-2xl relative">
+            <Image
+              src="/time/equipe2.png"
+              alt="Equipe Reginas"
+              fill
+              className="object-cover"
+            />
           </div>
-          {/* Gold accent */}
-          <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-[#C9951A] rounded-2xl -z-10" />
         </div>
       </section>
 
