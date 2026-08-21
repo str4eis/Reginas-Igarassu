@@ -26,9 +26,9 @@ export default function HomePage() {
 
         {/* Logo card */}
         <div className="flex justify-center md:justify-end">
-          <div className="w-72 h-72 md:w-[450px] md:h-[450px] rounded-3xl bg-[#8B35C4] overflow-hidden shadow-2xl relative">
+          <div className="w-64 h-64 md:w-[400px] md:h-[400px] rounded-3xl bg-[#8B35C4] overflow-hidden shadow-2xl relative">
             <Image
-              src="/logo.jpg"
+              src="/logo.png"
               alt="Logo Reginas"
               fill
               className="object-cover"
@@ -169,12 +169,15 @@ export default function HomePage() {
             </div>
             <div className="p-5">
               <p className="text-xs text-[#2A9D8F] font-semibold mb-2">Disponível agora</p>
-              <h4 className="font-display font-semibold text-lg text-[#1C1C2E] mb-2">Cartilha de Educação Financeira</h4>
+              <h4 className="font-display font-semibold text-lg text-[#1C1C2E] mb-2">Cartilha de Educação Financeira para Mulheres Pernambucanas - “Autonomia Financeira feminina”</h4>
               <p className="text-gray-500 text-xs leading-relaxed mb-4">
-                Material educativo sobre orçamento pessoal e familiar, precificação e gestão de
-                microempreendimentos, usado nas oficinas em Recife e Igarassu.
+                 Esta cartilha foi feita para te ajudar, de forma simples, a entender seu dinheiro, evitar dívidas, criar o hábito de guardar e tomar decisões mais conscientes no dia a dia.
               </p>
-              <a href="#" className="text-sm text-[#8B35C4] font-medium hover:underline flex items-center gap-1">
+              <a
+                href="/CARTILHA%20MULHERES%20REGINAS.pdf"
+                download="CARTILHA MULHERES REGINAS.pdf"
+                className="text-sm text-[#8B35C4] font-medium hover:underline flex items-center gap-1"
+              >
                 Baixar PDF
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -259,7 +262,6 @@ export default function HomePage() {
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link href="/parceiros" className="btn-white">Junte-se à comunidade</Link>
-            <Link href="/parceiros" className="btn-outline-white">Contate-nos</Link>
           </div>
         </div>
       </section>

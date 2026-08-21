@@ -194,9 +194,9 @@ export default function ParceirosPage() {
               Igarassu. Vamos conversar sobre como podemos colaborar?
             </p>
           </div>
-          <button className="shrink-0 bg-white text-[#8B35C4] font-semibold text-sm px-8 py-4 rounded-2xl hover:shadow-xl transition-all whitespace-nowrap">
+          <a href="mailto:projetofinanceiramente.ifpe@gmail.com" className="shrink-0 bg-white text-[#8B35C4] font-semibold text-sm px-8 py-4 rounded-2xl hover:shadow-xl transition-all whitespace-nowrap">
             Seja um Parceiro Institucional
-          </button>
+          </a>
         </div>
       </section>
 

@@ -78,13 +78,13 @@ export default function SobrePage() {
           </div>
 
           {/* Foto grupo */}
-          <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-amber-50 to-orange-100 h-72 flex items-center justify-center">
-            <div className="text-center text-gray-400">
-              <svg className="w-16 h-16 mx-auto mb-2 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              <p className="text-sm">Foto reunião de fundação</p>
-            </div>
+          <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-amber-50 to-orange-100 h-72 flex items-center justify-center relative">
+            <Image
+              src="/fotos/apresentacao.jpeg"
+              alt="Grupo de Mulheres do Curso para Empreendedoras"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       </section>

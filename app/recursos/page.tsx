@@ -22,7 +22,7 @@ function InvestmentSimulator() {
     n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 
   const chartBars = useMemo(() => {
-    const v = parseFloat(valor.replace(',', '.')) || 50000
+    const v = parseFloat(valor.replace(',', '.')) || 5000
     const t = parseFloat(taxa.replace(',', '.')) / 100 || 0.12
     const taxaMensal = Math.pow(1 + t, 1 / 12) - 1
     const pontos = [0, 24, 60, 96, 120].map((m) => ({
@@ -40,13 +40,13 @@ function InvestmentSimulator() {
         <div className="space-y-5">
           <div>
             <label className="text-xs font-semibold uppercase tracking-wider text-gray-400 block mb-1.5">
-              Valor para Investir (R$)
+              Valor para Guardar/Investir (R$)
             </label>
             <input
               type="text"
               value={valor}
               onChange={(e) => setValor(e.target.value)}
-              placeholder="Ex: 50.000,00"
+              placeholder="Ex: 500,00"
               className="w-full border-b-2 border-gray-200 focus:border-[#8B35C4] outline-none py-2 text-[#1C1C2E] text-sm transition-colors bg-transparent"
             />
           </div>
@@ -124,6 +124,10 @@ function InvestmentSimulator() {
             </div>
           ))}
         </div>
+
+        <p className="text-[11px] text-gray-400 mt-4 leading-relaxed">
+          Simulação apenas educativa, com juros compostos. Não é uma recomendação de investimento.
+        </p>
       </div>
     </div>
   )
@@ -136,25 +140,25 @@ export default function FerramentasPage() {
       {/* ─── HERO ─── */}
       <section className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <p className="section-label-teal">Empowering Your Legacy</p>
+          <p className="section-label-teal">Rede Reginas — UFPE + IFPE</p>
           <h1 className="font-display text-5xl md:text-6xl font-bold text-[#1C1C2E] leading-tight mb-6">
             Ferramentas<br />Financeiras
           </h1>
           <p className="text-gray-600 text-base leading-relaxed max-w-md">
-            A autonomia financeira começa com clareza. Use nossas ferramentas exclusivas para planejar,
-            simular e organizar seu patrimônio com a sofisticação que você merece.
+            A autonomia financeira começa com clareza. Use nossas ferramentas gratuitas para
+            planejar o orçamento da casa, precificar o seu negócio e simular o crescimento das
+            suas economias.
           </p>
         </div>
 
         <div className="flex justify-end">
-          <div className="w-full max-w-sm rounded-3xl overflow-hidden bg-gradient-to-br from-blue-900 to-slate-900 h-72 flex items-center justify-center">
-            <div className="text-center text-white/30">
-              <svg className="w-16 h-16 mx-auto mb-2 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-              </svg>
-              <p className="text-sm">Tecnologia financeira</p>
-            </div>
-          </div>
+          <Image 
+            src="/fotos/caruaru.jpeg"
+            alt="Ferramentas Reginas"
+            width={400}
+            height={400}
+            className="w-full h-auto max-w-sm rounded-3xl shadow-lg"
+          />
         </div>
       </section>
 
@@ -182,7 +186,12 @@ export default function FerramentasPage() {
               para ajudá-la a identificar quando uma compra é realmente necessária. Pause, reflita e compre com propósito.
             </p>
             <div className="flex gap-3">
-              <Link href="https://emanoelluiz01.github.io/Compra-Consciente/" target="_blank" className="bg-[#8B35C4] text-white text-sm font-semibold px-5 py-2.5 rounded-xl flex items-center gap-2 hover:bg-[#7B25B4] transition-colors">
+              <Link
+                href="https://emanoelluiz01.github.io/Compra-Consciente/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#8B35C4] text-white text-sm font-semibold px-5 py-2.5 rounded-xl flex items-center gap-2 hover:bg-[#7B25B4] transition-colors"
+              >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                 </svg>
@@ -208,23 +217,32 @@ export default function FerramentasPage() {
           <div>
             <p className="section-label-teal">Recurso Gratuito</p>
             <h2 className="font-display font-bold text-3xl text-[#1C1C2E] mb-4">
-              Planilha de Orçamento<br />Regina
+              Planilha de Orçamento<br />Reginas
             </h2>
             <p className="text-gray-600 text-sm leading-relaxed mb-6">
-              Nossa planilha proprietária foi desenhada para quem busca não apenas controlar gastos, mas
-              curar um estilo de vida consciente. Inclui abas de planejamento mensal, fundo de reserva e
-              metas de investimento.
+              Nossa planilha foi desenhada para quem quer controlar os gastos da casa e do negócio
+              com clareza. Inclui abas de orçamento mensal, fundo de reserva, cálculo de custo e
+              precificação para pequenos empreendimentos.
             </p>
             <div className="flex gap-3">
-              <button className="bg-[#1C1C2E] text-white text-sm font-semibold px-5 py-2.5 rounded-xl flex items-center gap-2 hover:bg-gray-800 transition-colors">
+              <a
+                href="/recursos/planilha-orcamento-reginas.xlsx"
+                download
+                className="bg-[#1C1C2E] text-white text-sm font-semibold px-5 py-2.5 rounded-xl flex items-center gap-2 hover:bg-gray-800 transition-colors"
+              >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
                 </svg>
                 Download Planilha
-              </button>
-              <button className="text-sm font-medium text-gray-600 hover:text-[#8B35C4] transition-colors px-3">
+              </a>
+              <Link
+                href="/recursos/tutorial-planilha-reginas.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-gray-600 hover:text-[#8B35C4] transition-colors px-3 flex items-center"
+              >
                 Ver Tutorial
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -249,7 +267,7 @@ export default function FerramentasPage() {
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
               Entenda como vieses cognitivos, emoções e crenças moldam suas decisões financeiras.
               Nossa seção especializada traz artigos técnicos e conceitos de finanças comportamentais
-              aplicados à realidade das comunidades de Igarassu.
+              aplicados à realidade das mulheres da nossa rede, do Recife a Igarassu.
             </p>
             <ul className="space-y-2 mb-6">
               {['Vieses Cognitivos', 'Arquitetura de Escolha', 'Desconto Hiperbólico', 'Contabilidade Mental'].map((item) => (
@@ -282,28 +300,32 @@ export default function FerramentasPage() {
       {/* ─── MAXIMIZE SUA GESTÃO ─── */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-display font-bold text-3xl text-[#1C1C2E] text-center mb-12">
+          <h2 className="font-display font-bold text-3xl text-[#1C1C2E] text-center mb-3">
             Maximize sua Gestão
           </h2>
+          <p className="text-gray-500 text-sm text-center max-w-lg mx-auto mb-12">
+            Temas trabalhados nas oficinas do Reginas para fortalecer as finanças da casa e do
+            negócio.
+          </p>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 icon: (
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 7h6m-6 4h6m-6 4h4M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z"/>
                   </svg>
                 ),
-                title: 'Custódia Segura',
-                desc: 'Entenda como proteger seu capital em instituições de primeira linha.',
+                title: 'Orçamento Doméstico',
+                desc: 'Organize as contas da casa, separe o essencial do supérfluo e crie o hábito de planejar mês a mês.',
               },
               {
                 icon: (
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 7h6m0 10v-3m-3 3v-6m-3 6v-2m9-9l-2 2m0 0l-2-2m2 2V3"/>
                   </svg>
                 ),
-                title: 'Análise de Mercado',
-                desc: 'Relatórios semanais curados por nosso time de especialistas.',
+                title: 'Precificação Justa',
+                desc: 'Calcule custos fixos e variáveis do seu negócio para chegar a um preço que cobre gastos e gera lucro.',
               },
               {
                 icon: (
@@ -311,8 +333,8 @@ export default function FerramentasPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                   </svg>
                 ),
-                title: 'Planejamento Sucessório',
-                desc: 'Como estruturar sua herança e legado familiar com eficiência.',
+                title: 'Separação Casa/Negócio',
+                desc: 'Aprenda a manter as finanças do empreendimento separadas das finanças pessoais e familiares.',
               },
             ].map((item) => (
               <div key={item.title} className="text-center">

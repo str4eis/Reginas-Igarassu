@@ -51,9 +51,9 @@ export default function ImpactoPage() {
         </div>
 
         <div className="flex justify-center md:justify-end">
-          <div className="w-[420px] h-72 md:w-[600px] md:h-80 rounded-3xl bg-[#8B35C4] overflow-hidden shadow-2xl relative">
+          <div className="w-[400px] max-w-full h-96 md:w-[500px] md:h-[420px] rounded-3xl bg-[#8B35C4] overflow-hidden shadow-2xl relative">
             <Image
-              src="/fotos/grupo-mulheres.png"
+              src="/fotos/grupo-mulheres.jpeg"
               alt="Grupo de Mulheres do Curso para Empreendedoras"
               fill
               className="object-cover"
@@ -333,13 +333,12 @@ export default function ImpactoPage() {
           </p>
 
           <div className="flex flex-wrap gap-3 justify-center">
-            <button className="btn-outline-white">
+            <a
+              href="mailto:projetofinanceiramente.ifpe@gmail.com"
+              className="bg-white text-[#8B35C4] px-6 py-3 rounded-full font-medium text-sm hover:bg-white/20 transition-all"
+            >
               Quero ser voluntária
-            </button>
-
-            <button className="bg-white/10 border border-white/30 text-white px-6 py-3 rounded-full font-medium text-sm hover:bg-white/20 transition-all">
-              Doar para o projeto
-            </button>
+            </a>
           </div>
         </div>
       </section>
