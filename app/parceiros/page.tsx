@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const editais = [
+  { year: '2025', title: 'Edital Pibex/IFPE — Reginas Igarassu', fonte: 'Pró-Reitoria de Extensão (PROEXT/IFPE)', status: 'Aprovado', statusColor: '#2A9D8F' },
   { year: '2025', title: '8º Seminário de Agroecologia do IFPE', fonte: 'Instituto Federal de Pernambuco', status: 'Concluído', statusColor: '#C9951A' },
   { year: '2025', title: 'FORCAMPO - CONIF', fonte: 'Instituto Federal de Pernambuco', status: 'Concluído', statusColor: '#2A9D8F' },
   { year: '2025', title: 'ENEXC', fonte: 'Instituto Federal de Pernambuco', status: 'Concluído', statusColor: '#8B35C4' },
@@ -9,23 +10,25 @@ const editais = [
 ]
 
 const parceiros = [
-  { name: 'HUB Canoa Grande', logo: '/parceiros/hub.png' },
   { name: 'UFPE', logo: '/parceiros/ufpe.png' },
   { name: 'IFPE', logo: '/parceiros/ifpe.png' },
-  { name: 'CTEN', logo: '/parceiros/cten.png' },
+  { name: 'HUB Canoa Grande', logo: '/parceiros/hub.png' },
+  { name: 'CTEN Igarassu', logo: '/parceiros/cten.png' },
+  { name: 'ADEMIG', logo: '/parceiros/ademig.png' },
+  { name: 'CECINE / UFPE', logo: '/parceiros/cecine.png' },
 ]
 
 const transparencia = [
-  { title: 'Relatório de Impacto 2023', desc: 'Análise detalhada do crescimento social e metas atingidas no último ano.', action: 'Download PDF (4.2MB)', icon: '📄' },
-  { title: 'Demonstrativo Financeiro', desc: 'Transparência total sobre a alocação de recursos e parcerias firmadas.', action: 'Download PDF (2.9MB)', icon: '🏛️' },
+  { title: 'Relatório de Impacto', desc: 'Análise do crescimento social e das metas atingidas pela rede Reginas (UFPE + IFPE).', action: 'Download PDF', icon: '📄' },
+  { title: 'Formulário do Projeto (Anexo I)', desc: 'Detalhamento oficial do projeto de extensão Reginas Igarassu, submetido ao Pibex/IFPE.', action: 'Download PDF', icon: '🏛️' },
   { title: 'Governança & Ética', desc: 'Nossos códigos de conduta e diretrizes de atuação institucional.', action: 'Acessar Online', icon: '🔍' },
   { title: 'Carta de Princípios', desc: 'O manifesto que guia nossas escolhas e parcerias estratégicas.', action: 'Ler Manifesto', icon: '📋' },
 ]
 
 const numeros = [
-  { label: 'Mulheres Impactadas', value: '+1.500' },
-  { label: 'Regiões Atendidas', value: '12' },
-  { label: 'Transparência', value: '100%' },
+  { label: 'Mulheres Impactadas (rede)', value: '+500' },
+  { label: 'Novas Beneficiárias Diretas (Igarassu)', value: '100' },
+  { label: 'Beneficiárias Indiretas (Igarassu)', value: '200' },
 ]
 
 export default function ParceirosPage() {
@@ -39,8 +42,10 @@ export default function ParceirosPage() {
             Crescendo em Rede:<br />Nossas Parcerias
           </h1>
           <p className="font-display italic text-gray-600 text-base leading-relaxed max-w-md mb-6">
-            Acreditamos que a transformação social é um trabalho coletivo. Juntos, construímos pontes
-            que capacitam mulheres e fortalecem comunidades através da educação e fomento direto.
+            O Reginas nasceu na UFPE e ganhou uma nova frente com o IFPE Campus Igarassu.
+            Acreditamos que a transformação social é um trabalho coletivo: juntas, essas
+            instituições — e os parceiros que caminham com elas — capacitam mulheres e fortalecem
+            comunidades através da educação financeira.
           </p>
           <div className="inline-flex items-center gap-2 bg-[#2A9D8F]/10 text-[#2A9D8F] text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full">
             ✦ Rede de Impacto
@@ -68,7 +73,7 @@ export default function ParceirosPage() {
             <div>
               <h2 className="font-display font-bold text-3xl text-[#1C1C2E]">Editais Aprovados</h2>
               <p className="text-gray-500 text-sm mt-1 max-w-sm">
-                O reconhecimento de nossa metodologia por instituições de fomento nacionais e internacionais.
+                O reconhecimento de nossa metodologia por instituições de fomento nacionais.
               </p>
             </div>
             <button className="text-sm text-[#8B35C4] font-medium hover:underline flex items-center gap-1 whitespace-nowrap ml-4">
@@ -105,6 +110,10 @@ export default function ParceirosPage() {
       {/* ─── PARCEIROS INSTITUCIONAIS ─── */}
       <section className="max-w-7xl mx-auto px-6 py-20">
         <h2 className="font-display font-bold text-3xl text-[#1C1C2E] text-center mb-3">Parceiros Institucionais</h2>
+        <p className="text-center text-gray-500 text-sm max-w-lg mx-auto mb-10">
+          UFPE e IFPE são as instituições que sustentam a rede Reginas, ao lado de parceiros
+          locais em Igarassu que viabilizam a execução das oficinas e ações comunitárias.
+        </p>
         <div className="w-10 h-0.5 bg-[#8B35C4] mx-auto mb-10" />
         <div className="flex flex-wrap justify-center gap-12">
           {parceiros.map((p) => (
@@ -131,11 +140,11 @@ export default function ParceirosPage() {
             <div>
               <h2 className="font-display font-bold text-3xl text-[#1C1C2E] mb-3">Transparência & Impacto</h2>
               <p className="text-gray-500 text-sm leading-relaxed mb-6">
-                A prestação de contas é o pilar da nossa credibilidade. Acesse nossos relatórios anuais e
-                dados de impacto auditados.
+                A prestação de contas é o pilar da nossa credibilidade. Acesse nossos relatórios e
+                o formulário oficial do projeto submetido ao IFPE.
               </p>
               <div className="border border-gray-100 rounded-2xl p-5">
-                <p className="text-sm font-semibold text-[#8B35C4] mb-3">Nossos Números (2023)</p>
+                <p className="text-sm font-semibold text-[#8B35C4] mb-3">Nossos Números</p>
                 {numeros.map((n) => (
                   <div key={n.label} className="flex justify-between items-center py-2 border-b border-gray-50 last:border-0">
                     <span className="text-sm text-gray-600">{n.label}</span>
@@ -181,8 +190,8 @@ export default function ParceirosPage() {
               Sua instituição pode ser o próximo motor de mudança.
             </h2>
             <p className="text-white/70 text-sm leading-relaxed">
-              Estamos buscando novos parceiros para expandir nossas frentes de atuação. Vamos conversar
-              sobre como podemos colaborar?
+              Estamos buscando novos parceiros para expandir a rede Reginas para além de Recife e
+              Igarassu. Vamos conversar sobre como podemos colaborar?
             </p>
           </div>
           <button className="shrink-0 bg-white text-[#8B35C4] font-semibold text-sm px-8 py-4 rounded-2xl hover:shadow-xl transition-all whitespace-nowrap">

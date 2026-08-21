@@ -20,8 +20,9 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Reginas Igarassu — Cultivando Prosperidade e Autonomia',
-  description: 'Empoderando mulheres em Igarassu por meio de educação financeira e desenvolvimento sustentável.',
+  title: 'Reginas — Fortalecendo as finanças da casa e do negócio',
+  description:
+    'Projeto de educação financeira e autonomia feminina nascido na UFPE, hoje em rede com o IFPE Campus Igarassu, atuando em Recife, Igarassu e cidades vizinhas de Pernambuco.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

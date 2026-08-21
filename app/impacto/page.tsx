@@ -2,26 +2,26 @@ import Image from 'next/image'
 
 const timeline = [
   {
-    year: '2021',
-    title: 'O Início: Fundação Reginas',
+    year: '2018',
+    title: 'O Início: Reginas na UFPE',
     description:
-      'Lançamento do coletivo focado em mapear as necessidades de mulheres curadoras de suas próprias famílias em Igarassu.',
+      'Nascimento do projeto dentro do grupo de pesquisa Caleidoscópio (UFPE), com foco em educação financeira e autonomia de mulheres do bairro de Joana Bezerra, no Recife.',
     color: '#8B35C4',
     align: 'right',
   },
   {
-    year: '2022',
-    title: 'Expansão Litorânea',
+    year: '2025',
+    title: 'Nasce o Reginas Igarassu',
     description:
-      'Primeira grande intervenção nas vilas de pescadores, integrando o saber das marisqueiras aos circuitos de economia criativa.',
+      'Parceria formalizada com o IFPE Campus Igarassu (Edital Pibex, outubro/2025), estendendo a metodologia da UFPE às mulheres de áreas rurais e urbanas de Igarassu e cidades vizinhas.',
     color: '#2A9D8F',
     align: 'left',
   },
   {
-    year: '2023',
-    title: 'Reconhecimento Regional',
+    year: '2026',
+    title: 'Uma Rede, Duas Frentes',
     description:
-      'Prêmio de Inovação Social pela integração de práticas ancestrais com gestão contemporânea de projetos femininos.',
+      'UFPE e IFPE passam a atuar como uma única rede — o Reginas —, unindo Recife, Igarassu e o litoral pernambucano em torno do letramento financeiro crítico.',
     color: '#C9951A',
     align: 'right',
   },
@@ -40,13 +40,13 @@ export default function ImpactoPage() {
             <br />
             Mudanças em
             <br />
-            Igarassu
+            Rede
           </h1>
 
           <p className="text-gray-600 text-base leading-relaxed max-w-md">
-            O Projeto Reginas atua na linha de frente da curadoria comunitária,
-            transformando a realidade de mulheres nas zonas rurais e
-            litorâneas através da educação e arte.
+            O Reginas atua na linha de frente da educação financeira comunitária, transformando a
+            realidade de mulheres do Recife, de Igarassu e das cidades vizinhas através do
+            letramento crítico e comportamental.
           </p>
         </div>
 
@@ -70,11 +70,11 @@ export default function ImpactoPage() {
             <p className="font-display font-bold text-6xl mb-1">500+</p>
 
             <p className="text-xs uppercase tracking-widest text-white/70 font-semibold mb-4">
-              Mulheres Impactadas
+              Mulheres Impactadas na Rede
             </p>
 
             <p className="font-display italic text-sm text-white/80 border-t border-white/20 pt-4">
-              "A rede Reginas me deu a voz que eu não sabia que tinha."
+              "O Reginas me deu a voz que eu não sabia que tinha."
             </p>
           </div>
 
@@ -103,11 +103,11 @@ export default function ImpactoPage() {
 
               <div>
                 <p className="font-display font-bold text-5xl text-[#1C1C2E]">
-                  12
+                  100+
                 </p>
 
                 <p className="text-xs uppercase tracking-widest text-gray-400 font-semibold mt-1">
-                  Comunidades Atendidas
+                  Novas Beneficiárias Diretas em Igarassu
                 </p>
               </div>
             </div>
@@ -131,12 +131,12 @@ export default function ImpactoPage() {
               </svg>
 
               <span className="font-semibold text-sm">
-                Costeiras & Rurais
+                Recife, Igarassu & Litoral
               </span>
             </div>
 
             <p className="text-white/80 text-sm leading-relaxed">
-              Integração de territórios diversos em Igarassu.
+              Duas instituições, uma rede: UFPE e IFPE atuando lado a lado em Pernambuco.
             </p>
           </div>
         </div>
@@ -170,12 +170,12 @@ export default function ImpactoPage() {
 
                 <div>
                   <h4 className="font-semibold text-[#1C1C2E] mb-1">
-                    Zonas Litorâneas
+                    Recife — Joana Bezerra
                   </h4>
 
                   <p className="text-gray-500 text-sm leading-relaxed">
-                    Foco em comunidades de pesca artesanal e artesanato
-                    marinho, preservando a cultura oceânica de Igarassu.
+                    Berço do projeto na UFPE, com atuação junto a mulheres da comunidade e apoio
+                    do CECINE/UFPE.
                   </p>
                 </div>
               </div>
@@ -199,12 +199,12 @@ export default function ImpactoPage() {
 
                 <div>
                   <h4 className="font-semibold text-[#1C1C2E] mb-1">
-                    Zonas Rurais
+                    Igarassu e Cidades Vizinhas
                   </h4>
 
                   <p className="text-gray-500 text-sm leading-relaxed">
-                    Fortalecimento da agricultura familiar e empreendedorismo
-                    feminino no campo.
+                    Frente Reginas Igarassu, em parceria com o IFPE, atendendo mulheres de
+                    comunidades rurais, urbanas e de pesca artesanal (marisqueiras).
                   </p>
                 </div>
               </div>
@@ -225,10 +225,10 @@ export default function ImpactoPage() {
             />
 
             <div className="absolute bottom-4 left-4 bg-white rounded-xl px-3 py-2 shadow text-xs font-semibold text-[#1C1C2E] z-10">
-              📍 FOCO PRINCIPAL
+              📍 RECIFE & IGARASSU
               <br />
               <span className="font-normal text-gray-500">
-                Igarassu, Pernambuco
+                Pernambuco
               </span>
             </div>
           </div>
@@ -289,6 +289,37 @@ export default function ImpactoPage() {
         </div>
       </section>
 
+      {/* ─── METAS DA FRENTE IGARASSU ─── */}
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <div className="text-center mb-10">
+          <p className="section-label">Metas 2025–2026</p>
+          <h2 className="font-display font-bold text-3xl text-[#1C1C2E]">O que a Frente Igarassu se Propõe a Entregar</h2>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="card">
+            <p className="font-display font-bold text-4xl text-[#8B35C4] mb-2">+30%</p>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Ganho médio esperado na pontuação de letramento financeiro entre pré e pós-teste
+              das participantes.
+            </p>
+          </div>
+          <div className="card">
+            <p className="font-display font-bold text-4xl text-[#2A9D8F] mb-2">50</p>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Empreendedoras apoiadas na adoção de cálculo de custo, precificação justa e
+              separação entre finanças do negócio e da casa.
+            </p>
+          </div>
+          <div className="card">
+            <p className="font-display font-bold text-4xl text-[#C9951A] mb-2">50%</p>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Meta de participantes relatando maior poder de decisão nas finanças domésticas
+              após o acompanhamento.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ─── CTA ─── */}
       <section className="max-w-7xl mx-auto px-6 py-20">
         <div className="bg-gradient-to-br from-[#8B35C4] to-[#6B1EA0] rounded-3xl p-12 text-center text-white">
@@ -297,8 +328,8 @@ export default function ImpactoPage() {
           </h2>
 
           <p className="text-white/80 text-sm max-w-md mx-auto mb-8">
-            Sua participação pode ser o diferencial para mais uma mulher de
-            Igarassu descobrir seu poder de curadora e transformação.
+            Sua participação pode ser o diferencial para mais uma mulher, no Recife ou em
+            Igarassu, descobrir sua autonomia financeira.
           </p>
 
           <div className="flex flex-wrap gap-3 justify-center">

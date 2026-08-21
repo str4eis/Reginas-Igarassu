@@ -122,7 +122,7 @@ export default function PsicologiaFinanceiraPage() {
             <p className="text-[#8B35C4] font-semibold mb-2">Finanças Comportamentais</p>
             <h2 className="font-display font-bold text-3xl text-[#1C1C2E]">Os Grandes Temas</h2>
             <p className="text-gray-500 text-sm mt-2 max-w-md mx-auto">
-              Conceitos da economia comportamental aplicados à realidade das mulheres de Igarassu.
+              Conceitos da economia comportamental aplicados à realidade das mulheres da rede Reginas, do Recife a Igarassu.
             </p>
           </div>
 

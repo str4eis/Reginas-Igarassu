@@ -8,14 +8,15 @@ export default function HomePage() {
       {/* ─── HERO ─── */}
       <section className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <p className="section-label">Projeto Institucional</p>
+          <p className="section-label">Rede de Extensão UFPE + IFPE</p>
           <h1 className="font-display text-5xl md:text-6xl font-bold text-[#1C1C2E] leading-tight mb-6">
             Cultivando<br />Prosperidade e<br />Autonomia.
           </h1>
           <p className="text-gray-600 text-base leading-relaxed max-w-md mb-8">
-            Empoderando mulheres em Igarassu por meio de educação financeira e desenvolvimento
-            sustentável. Preenchemos a lacuna entre a sabedoria tradicional e as ferramentas
-            financeiras modernas.
+            O Reginas nasceu na Universidade Federal de Pernambuco (UFPE) e hoje forma uma rede com
+            o Instituto Federal de Pernambuco (IFPE) — Campus Igarassu, unindo Recife, Igarassu e
+            cidades vizinhas em torno de um mesmo propósito: fortalecer as finanças da casa e do
+            negócio de mulheres em contextos de vulnerabilidade social.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/parceiros" className="btn-primary">Junte-se a nós</Link>
@@ -50,9 +51,10 @@ export default function HomePage() {
               </div>
               <h3 className="font-display font-semibold text-2xl text-[#1C1C2E] mb-3">Missão</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Proporcionar educação financeira acessível e recursos vocacionais para as mulheres de
-                Igarassu, especialmente aquelas de comunidades tradicionais de pesca e agricultura,
-                promovendo a independência econômica e a liderança.
+                Promover o letramento e a gestão financeira de mulheres e de seus negócios,
+                contribuindo para uma educação financeira crítica e comportamental, para a
+                autonomia econômica e para o desenvolvimento local em Recife, Igarassu e cidades
+                vizinhas.
               </p>
             </div>
 
@@ -65,9 +67,10 @@ export default function HomePage() {
               </div>
               <h3 className="font-display font-semibold text-2xl text-[#1C1C2E] mb-3">Visão</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Tornar-se um modelo institucional de referência para o empoderamento feminino em
-                Pernambuco, criando uma rede sustentável de mulheres que gerenciam seus próprios
-                futuros financeiros com conhecimento de causa.
+                Consolidar-se como referência em extensão universitária para o empoderamento
+                feminino em Pernambuco, ampliando a rede iniciada na UFPE em parceria com o IFPE
+                para novos territórios, com mulheres gerindo seus próprios futuros financeiros com
+                conhecimento de causa.
               </p>
             </div>
           </div>
@@ -148,7 +151,7 @@ export default function HomePage() {
         <div className="flex items-end justify-between mb-2">
           <div>
             <h2 className="font-display font-bold text-3xl text-[#1C1C2E]">Kit de Ferramentas para Empoderamento</h2>
-            <p className="text-gray-500 text-sm mt-1">Recursos especificamente concebidos para as necessidades das mulheres rurais e costeiras curadoras.</p>
+            <p className="text-gray-500 text-sm mt-1">Recursos concebidos para as necessidades das mulheres urbanas, rurais e costeiras da nossa rede.</p>
           </div>
           <Link href="/recursos" className="text-sm text-[#8B35C4] font-medium hover:underline whitespace-nowrap ml-4">
             Ver todos os recursos →
@@ -166,9 +169,10 @@ export default function HomePage() {
             </div>
             <div className="p-5">
               <p className="text-xs text-[#2A9D8F] font-semibold mb-2">Disponível agora</p>
-              <h4 className="font-display font-semibold text-lg text-[#1C1C2E] mb-2">Cartilha: Mulheres do Campo</h4>
+              <h4 className="font-display font-semibold text-lg text-[#1C1C2E] mb-2">Cartilha de Educação Financeira</h4>
               <p className="text-gray-500 text-xs leading-relaxed mb-4">
-                Um livrete educativo abrangente com foco em micro-investimento e gestão sustentável para projetos agrícolas.
+                Material educativo sobre orçamento pessoal e familiar, precificação e gestão de
+                microempreendimentos, usado nas oficinas em Recife e Igarassu.
               </p>
               <a href="#" className="text-sm text-[#8B35C4] font-medium hover:underline flex items-center gap-1">
                 Baixar PDF
@@ -189,7 +193,7 @@ export default function HomePage() {
             <div className="p-5">
               <h4 className="font-display font-semibold text-lg text-[#1C1C2E] mb-2">Mulheres da Água</h4>
               <p className="text-gray-500 text-xs leading-relaxed mb-4">
-                Alfabetização financeira adaptada para comunidades costeiras e cooperativas de pesca artesanal.
+                Alfabetização financeira adaptada para comunidades costeiras e cooperativas de pesca artesanal em Igarassu.
               </p>
               <a href="#" className="text-sm text-[#8B35C4] font-medium hover:underline flex items-center gap-1">
                 Ler online
@@ -230,10 +234,10 @@ export default function HomePage() {
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
-            { value: '12+', label: 'Territórios' },
+            { value: '2', label: 'Instituições em Rede (UFPE + IFPE)' },
             { value: '500+', label: 'Mulheres Alcançadas', color: 'text-[#2A9D8F]' },
-            { value: '25', label: 'Oficinas Realizadas' },
-            { value: '100%', label: 'Impacto Local' },
+            { value: '100+', label: 'Novas Beneficiárias em Igarassu' },
+            { value: '4', label: 'ODS Trabalhados (1, 4, 5 e 12)' },
           ].map(({ value, label, color }) => (
             <div key={label}>
               <p className={`font-display font-bold text-4xl md:text-5xl ${color || 'text-[#1C1C2E]'} mb-1`}>{value}</p>
@@ -247,11 +251,11 @@ export default function HomePage() {
       <section className="bg-[#8B35C4] py-20 text-center text-white">
         <div className="max-w-2xl mx-auto px-6">
           <h2 className="font-display font-bold text-4xl md:text-5xl mb-4 leading-tight">
-            Pronto para liderar sua própria narrativa?
+            Pronta para liderar sua própria narrativa?
           </h2>
           <p className="text-white/80 text-base mb-8 leading-relaxed">
-            Junte-se à nossa rede de curadoras hoje mesmo e comece a construir o futuro que você merece.
-            Nossa comunidade está esperando por você.
+            Junte-se à nossa rede de mulheres hoje mesmo e comece a construir o futuro que você merece.
+            Nossa comunidade em Recife e em Igarassu está esperando por você.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link href="/parceiros" className="btn-white">Junte-se à comunidade</Link>

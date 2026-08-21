@@ -7,7 +7,7 @@ const team = [
     role: 'Fundadora & CEO',
     color: '#C9951A',
     photo: '/time/mary.jpeg',
-    bio: 'Marydyana Mota é graduanda em Administração pelo Instituto Federal de Pernambuco (IFPE), mãe e empreendedora. Atua com educação financeira, gestão de pequenos negócios e autonomia feminina, desenvolvendo pesquisas, projetos e formações voltadas ao fortalecimento econômico de mulheres em contextos de vulnerabilidade social. Também é extensionista e articuladora da parceria entre os projetos Reginas UFPE e Reginas IFPE.',
+    bio: 'Marydyana Mota é graduanda em Administração pelo Instituto Federal de Pernambuco (IFPE), mãe e empreendedora. Atua com educação financeira, gestão de pequenos negócios e autonomia feminina, desenvolvendo pesquisas, projetos e formações voltadas ao fortalecimento econômico de mulheres em contextos de vulnerabilidade social. Também é extensionista e articuladora da parceria entre as frentes Reginas UFPE e Reginas Igarassu (IFPE).',
   },
   {
     name: 'Ester Reis',
@@ -25,10 +25,10 @@ const team = [
   },
   {
     name: 'Kécia Galvão',
-    role: 'Professora Doutora',
+    role: 'Professora Doutora — Fundadora do Reginas (UFPE)',
     color: '#C9951A',
     photo: '/time/kecia.jpeg',
-    bio: 'Possui graduação em Ciências Contábeis pela Universidade Federal de Pernambuco (2006), Doutora em Administração (UFPE) e Mestra em Ciências Contábeis pela mesma instituição, com sólida expertise em Finanças Corporativas e Contabilidade Gerencial. Professora Adjunta da UFPE, lidera o grupo de pesquisa "Caleidoscópio: Perspectivas em Finanças e Contabilidade", onde coordena os projetos de extensão de impacto social "Reginas" e "Educação Financeira nas Escolas".',
+    bio: 'Possui graduação em Ciências Contábeis pela Universidade Federal de Pernambuco (2006), Doutora em Administração (UFPE) e Mestra em Ciências Contábeis pela mesma instituição, com sólida expertise em Finanças Corporativas e Contabilidade Gerencial. Professora Adjunta da UFPE, lidera o grupo de pesquisa "Caleidoscópio: Perspectivas em Finanças e Contabilidade", berço do projeto Reginas, e coordena hoje a parceria de extensão com o IFPE que deu origem à frente Reginas Igarassu.',
   },
   {
     name: 'Roberta Aragão',
@@ -89,12 +89,13 @@ export default function NossoTimePage() {
         <div>
           <p className="section-label">Nossa Equipe</p>
           <h1 className="font-display text-5xl md:text-6xl font-bold text-[#1C1C2E] leading-tight mb-6">
-            A Força da Nossa{' '}
-            <span className="text-[#8B35C4]">Diversidade.</span>
+            Uma Rede,{' '}
+            <span className="text-[#8B35C4]">Duas Instituições.</span>
           </h1>
           <p className="text-gray-600 text-base leading-relaxed max-w-md">
-            Somos um coletivo de curadoras, educadoras e especialistas unidas por um propósito:
-            democratizar o conhecimento institucional através de um olhar empático e sofisticado.
+            Somos pesquisadoras, docentes e extensionistas da UFPE e do IFPE unidas por um mesmo
+            propósito: fortalecer as finanças da casa e do negócio de mulheres em Pernambuco,
+            do Recife a Igarassu.
           </p>
         </div>
 
@@ -134,7 +135,7 @@ export default function NossoTimePage() {
           </h2>
           <p className="text-gray-500 text-sm max-w-md mx-auto mb-8">
             Estamos sempre em busca de novas perspectivas e talentos que compartilhem nossa visão de
-            um mundo mais curado e consciente.
+            autonomia financeira feminina.
           </p>
           <Link href="/parceiros" className="btn-primary inline-flex items-center gap-2">
             Ver Oportunidades →
