@@ -56,7 +56,7 @@ export default function ParceirosPage() {
         <div className="flex justify-center md:justify-end">
           <div className="w-72 h-72 md:w-[500px] md:h-[300px] rounded-3xl bg-[#8B35C4] overflow-hidden shadow-2xl relative">
             <Image
-              src="/fotos/sernegra.jpg"
+              src="/fotos/reginasufpe.jpeg"
               alt="Parcerias Reginas"
               fill
               className="object-cover"

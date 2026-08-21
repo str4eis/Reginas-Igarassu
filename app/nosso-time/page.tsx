@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 const team = [
   {
     name: 'Marydyana Mota',
-    role: 'Fundadora & CEO',
+    role: 'Representante do Reginas Igarassu (IFPE)',
     color: '#C9951A',
     photo: '/time/mary.jpeg',
     bio: 'Marydyana Mota é graduanda em Administração pelo Instituto Federal de Pernambuco (IFPE), mãe e empreendedora. Atua com educação financeira, gestão de pequenos negócios e autonomia feminina, desenvolvendo pesquisas, projetos e formações voltadas ao fortalecimento econômico de mulheres em contextos de vulnerabilidade social. Também é extensionista e articuladora da parceria entre as frentes Reginas UFPE e Reginas Igarassu (IFPE).',
